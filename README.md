@@ -16,7 +16,7 @@ The user can call `POST /import-external-content-from-url` to import a PDF from 
 - FastEndpoints
 - Docker
 
-This API service is published as a Docker image. You can run it with `docker run -p 8080:8080 xudong/ssrf-demo:latest`. 
+This API service is published as a Docker image on GitHub Container Registry. You can run it with `docker run -p 8080:8080 ghcr.io/xudong-yang/aws-imds-v1-ssrf-demo:latest`. 
 
 ## API Specification
 
