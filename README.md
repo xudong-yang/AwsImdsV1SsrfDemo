@@ -14,6 +14,9 @@ The user can call `POST /import-external-content-from-url` to import a PDF from 
 
 - .NET 9 
 - FastEndpoints
+- Docker
+
+This API service is published as a Docker image. You can run it with `docker run -p 8080:8080 xudong/ssrf-demo:latest`. 
 
 ## API Specification
 
@@ -27,7 +30,7 @@ For POST import API, there must be a `Content-Type: application/json` header and
 Example cURL command for happy path: 
 
 ```shell
-curl -X POST --location "http://localhost:5077/import-external-content-from-url" \
+curl -X POST --location "http://localhost:8080/import-external-content-from-url" \
     -H "Content-Type: application/json" \
     -d '{
             "url": "https://pdfobject.com/pdf/sample.pdf"
@@ -49,7 +52,7 @@ Content-Type: application/json; charset=utf-8
 For unhappy path, pass in something that is not PDF: 
 
 ```shell
-curl -X POST --location "http://localhost:5077/import-external-content-from-url" \
+curl -X POST --location "http://localhost:8080/import-external-content-from-url" \
     -H "Content-Type: application/json" \
     -d '{
             "url": "https://json.org/img/json160.gif"
