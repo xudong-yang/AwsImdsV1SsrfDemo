@@ -11,4 +11,8 @@
       <PackageReference Include="FastEndpoints" Version="7.2.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include=".github\workflows\docker-publish.yaml" />
+    </ItemGroup>
+
 </Project>
