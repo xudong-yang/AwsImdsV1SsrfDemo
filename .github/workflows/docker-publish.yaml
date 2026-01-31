@@ -3,6 +3,10 @@ name: Build and Push Docker Image
 on:
   push:
     branches: [ "main" ]
+    paths-ignore:
+      - README.md
+      - LICENSE.md
+      - LICENSE
 
 permissions:
   contents: read
